@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Linux-c++"
+	tests="6"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname="erie-dvrk"
+	time="0"
+	timestamp="2026-10-08T19:58:28"
+	>
+	<testcase name="controller_contract" classname="controller_contract" time="0.0019637" status="run">
+		<properties/>
+		<system-out>Controller contract failures: 0
+</system-out>
+	</testcase>
+	<testcase name="output_policy_and_model" classname="output_policy_and_model" time="0.00267793" status="run">
+		<properties/>
+		<system-out>Output policy and explicit model loading checks passed
+</system-out>
+	</testcase>
+	<testcase name="legacy_numerical_replay" classname="legacy_numerical_replay" time="0.00789298" status="run">
+		<properties/>
+		<system-out>Replayed 572 original-output rows in 14 scenarios; all pressure, model, trim, residual and contact states match.
+</system-out>
+	</testcase>
+	<testcase name="installed_consumer" classname="installed_consumer" time="0.566902" status="run">
+		<properties/>
+		<system-out>-- Installed public headers, find_package and linked independent consumer passed
+</system-out>
+	</testcase>
+	<testcase name="offline_open" classname="offline_open" time="0.00242925" status="run">
+		<properties/>
+		<system-out>time_s,target_x_mm,target_y_mm,target_z_mm,measured_x_mm,measured_y_mm,measured_z_mm,p0_kpa,p1_kpa,p2_kpa,mode,error_mm,numeric_valid,contact,new_frame,write_sequence
+1,0,0.5,28.9,-0.119550505979,0.2,28.6,-0.00225970848953,0.0112508354306,0.0115699828258,open_loop,0.581097852023,1,free,0,1
+1.005,0.0119998720004,0.5,28.9,-0.119550505979,0.2,28.6,-0.00453647389003,0.0228618613318,0.0227880629494,open_loop,0.57922241626,1,free,0,1
+1.01,0.0239989760131,0.5,28.9,-0.119550505979,0.2,28.6,-0.00681043747065,0.0346624159137,0.0338030555668,open_loop,0.577594991658,1,free,0,2
+1.015,0.0359965440995,0.5,28.9,-0.119550505979,0.2,28.6,-0.00908062114359,0.0466477155993,0.0446099237208,open_loop,0.576215860365,1,free,0,2
+1.02,0.0479918084194,0.5,28.9,-0.0941810815333,0.2,28.6,-0.011346047909,0.0588127116928,0.0552038962211,open_loop,0.575084922306,1,free,0,3
+1.025,0.05998400128,0.5,28.9,-0.0941810815333,0.2,28.6,-0.013605745474,0.0711521101052,0.0655804879048,open_loop,0.574201693651,1,free,0,3
+1.03,0.0719723551849,0.5,28.9,...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="offline_closed" classname="offline_closed" time="0.00243221" status="run">
+		<properties/>
+		<system-out>time_s,target_x_mm,target_y_mm,target_z_mm,measured_x_mm,measured_y_mm,measured_z_mm,p0_kpa,p1_kpa,p2_kpa,mode,error_mm,numeric_valid,contact,new_frame,write_sequence
+1,0,0.5,28.9,-0.119550505979,0.2,28.6,-0.00225970848953,0.0112508354306,0.0115699828258,position_servo,0.440786029134,1,free,1,1
+1.005,0.0119998720004,0.5,28.9,-0.119550505979,0.2,28.6,-0.00453647389003,0.0228618613318,0.0227880629494,position_servo,0.440786029134,1,free,0,1
+1.01,0.0239989760131,0.5,28.9,-0.119550505979,0.2,28.6,-0.00681043747065,0.0346624159137,0.0338030555668,position_servo,0.440786029134,1,free,0,2
+1.015,0.0359965440995,0.5,28.9,-0.119550505979,0.2,28.6,-0.00908062114359,0.0466477155993,0.0446099237208,position_servo,0.440786029134,1,free,0,2
+1.02,0.0479918084194,0.5,28.9,-0.0941810815333,0.2,28.6,-0.011346047909,0.0588127116928,0.0552038962211,position_servo,0.447451819348,1,free,1,3
+1.025,0.05998400128,0.5,28.9,-0.0941810815333,0.2,28.6,-0.013605745474,0.0711521101052,0.0655804879048,position_servo,0.447451819348,1,free,0,3...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+</testsuite>

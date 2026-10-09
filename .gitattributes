@@ -1,0 +1,5 @@
+# Keep text consistent on Windows and Linux.
+* text=auto eol=lf
+
+# Preserve the recorded bytes and SHA-256 of the generated legacy provenance.
+/tests/data/legacy_provenance.json -text

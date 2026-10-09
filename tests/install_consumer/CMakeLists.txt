@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(independent_consumer LANGUAGES CXX)
+find_package(soft_actuator_core CONFIG REQUIRED)
+add_executable(consumer main.cpp)
+target_link_libraries(consumer PRIVATE soft_actuator::core)
+enable_testing()
+add_test(NAME installed_api COMMAND consumer "${ACTUATOR_PROFILE}")

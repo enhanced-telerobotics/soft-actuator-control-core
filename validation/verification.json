@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-08",
+  "library": "soft_actuator_core 0.1.0",
+  "windows": {
+    "compiler": "MSVC 19.42.34436.0",
+    "configuration": "Release x64 C++17",
+    "tests_passed": 6,
+    "build": "C:\\Users\\ERIE_Lab\\Documents\\jxs1778\\build\\soft_actuator_core",
+    "junit": "windows-ctest.xml"
+  },
+  "linux": {
+    "compiler": "GCC 13.3.0",
+    "configuration": "Release C++17",
+    "tests_passed": 6,
+    "build": "/home/erie_lab/Documents/jxs1778/soft_actuator_core_validation_20261008/build",
+    "junit": "linux-ctest.xml"
+  },
+  "legacy_reference": {
+    "rows": 572,
+    "scenarios": 14,
+    "contact_states": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "tolerance": "1e-8 + 1e-7 * max(abs(actual),abs(expected)); exact states and nonfinite classification",
+    "provenance": "../tests/data/legacy_provenance.json",
+    "original_seven_control_source_and_profile_hashes_unchanged": true
+  },
+  "hardware_accessed": false,
+  "ros_nodes_created": false,
+  "scope": "Independent core only; ROS/Sensoray integration deferred",
+  "documentation_update": {
+    "date": "2026-10-09",
+    "change": "README translated to English; source manifest refreshed",
+    "code_changed": false,
+    "tests_rerun": false
+  }
+}

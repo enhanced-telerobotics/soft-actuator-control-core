@@ -1,0 +1,36 @@
+# Actuator pressure-to-length profile
+# Profile 4 was fitted from the 2026-08-20 characterization of a new device.
+# Positive source: PtoL_pos.csv
+# Positive source SHA-256: 357e611b477d53ca3c96c9a8c47bcd2fcb771984ab5555ce1b9ab617a01c88c4
+# Negative source: PtoL_neg.csv
+# Negative source SHA-256: 039d136e91937d8c3d7175b657a2997f377e9478ab40be3199c7da49c5b5daf1
+# The two measured zero-pressure lengths (27.789566 and 27.812294 mm)
+# were averaged, then both branches were translated by +0.799070 mm to
+# preserve the runtime/XPA calibration h0 of 28.6 mm.
+# Positive model: fixed-h0 linear fit over 0 to +50 kPa.
+# Negative model: fixed-h0, continuous piecewise-linear fit over 0 to -40 kPa.
+# The near-zero branch is fitted first; the far branch is constrained to meet
+# it continuously at -19 kPa so pressure inversion cannot jump at the break.
+# Fit quality: positive RMSE=0.092583 mm; negative RMSE=0.322941 mm.
+# Exp2 test settings: 4.9 mm target radius and -4 kPa neutral pressure.
+# The -40 to +45 kPa user-study pressure guard remains unchanged.
+# Units: length in mm, pressure in kPa.
+profile_schema_version=2
+profile_id=4
+description=2026-08-20 new-device full-range pressure-to-length fit
+neutralLengthMm=28.6000000000
+positiveSlopeMmPerKPa=0.1531616303
+positivePressureMinKPa=0.0000000000
+positivePressureMaxKPa=50.0000000000
+negativeModel=piecewise_linear
+negativeBreakpointKPa=-19.0000000000
+negativeNearSlopeMmPerKPa=0.1800091935
+negativeNearInterceptMm=28.6000000000
+negativeFarSlopeMmPerKPa=0.4239443949
+negativeFarInterceptMm=33.2347688268
+negativePressureMinKPa=-40.0000000000
+negativePressureMaxKPa=0.0000000000
+exp2TargetRadiusMm=4.9000000000
+exp2NeutralPressureKPa=-4.0000000000
+studyPressureMinKPa=-40.0000000000
+studyPressureMaxKPa=45.0000000000

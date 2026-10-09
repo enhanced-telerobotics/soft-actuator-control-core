@@ -1,0 +1,3 @@
+@PACKAGE_INIT@
+include("${CMAKE_CURRENT_LIST_DIR}/soft_actuator_coreTargets.cmake")
+check_required_components(soft_actuator_core)

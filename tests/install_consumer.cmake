@@ -1,0 +1,23 @@
+if(NOT CONFIG)
+    set(CONFIG Release)
+endif()
+function(run)
+    execute_process(COMMAND ${ARGV} RESULT_VARIABLE result
+        OUTPUT_VARIABLE output ERROR_VARIABLE error)
+    if(NOT result EQUAL 0)
+        message(FATAL_ERROR "Command failed (${result}): ${ARGV}\n${output}\n${error}")
+    endif()
+endfunction()
+set(prefix "${CORE_BUILD}/consumer-install")
+set(consumer_build "${CORE_BUILD}/consumer-build")
+run("${CMAKE_COMMAND}" --install "${CORE_BUILD}" --config "${CONFIG}" --prefix "${prefix}")
+set(configure_args -S "${CORE_SOURCE}/tests/install_consumer" -B "${consumer_build}"
+    -G "${GENERATOR}" "-DCMAKE_PREFIX_PATH=${prefix}" "-DCMAKE_BUILD_TYPE=${CONFIG}"
+    "-DACTUATOR_PROFILE=${prefix}/share/soft_actuator_core/profiles/actuatorprofile_4.txt")
+if(PLATFORM)
+    list(APPEND configure_args -A "${PLATFORM}")
+endif()
+run("${CMAKE_COMMAND}" ${configure_args})
+run("${CMAKE_COMMAND}" --build "${consumer_build}" --config "${CONFIG}")
+run("${CMAKE_CTEST_COMMAND}" --test-dir "${consumer_build}" -C "${CONFIG}" --output-on-failure)
+message(STATUS "Installed public headers, find_package and linked independent consumer passed")
